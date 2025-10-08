@@ -10,8 +10,6 @@ I’m currently exploring **AI development** across three areas:
 - ⚙️ **Low-code tools** — integrating workflows and automations with platforms like **n8n**  
 - 🚀 **No-code AI tools** — experimenting with **Teachable Machine**, **Roboflow**, and **Kaggle** to create fast, deployable AI prototypes  
 
-This portfolio showcases projects that merge my background in **Electronics Engineering** with my growing expertise in **Artificial Intelligence**.  
-
 ---
 
 ### 🌐 Connect with Me  
