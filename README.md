@@ -21,7 +21,7 @@ I’m currently exploring **AI development** across three areas:
 
 ---
 
-### 🧩 AI and No-Code Tools  
+### 🧩 AI Development Tools  
 
 <p align="center">
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuoDnybkjAaB9DmZNH4em5CySqrwacTBufiA&s" height="40" alt="Teachable Machine"/>
