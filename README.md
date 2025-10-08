@@ -7,7 +7,7 @@ Programming is my hobby, and through it, I create personal projects that combine
 
 I’m currently exploring **AI development** across three areas:  
 - 🧠 **Traditional coding** — using Python, machine learning libraries, and APIs  
-- ⚙️ **Low-code tools** — integrating workflows and automations with platforms like **n8n**  
+- ⚙️ **Low-code tools** — integrating workflows and automations with platforms like **n8n** and **Make**
 - 🚀 **No-code AI tools** — experimenting with **Teachable Machine**, **Roboflow**, and **Kaggle** to create fast, deployable AI prototypes  
 
 ---
@@ -27,6 +27,7 @@ I’m currently exploring **AI development** across three areas:
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuoDnybkjAaB9DmZNH4em5CySqrwacTBufiA&s" height="40" alt="Teachable Machine"/>
   <img src="https://avatars.githubusercontent.com/u/53104118?s=280&v=4" height="40" alt="Roboflow"/>
   <img src="https://avatars.githubusercontent.com/u/45487711?s=200&v=4" height="40" alt="n8n"/>
+  <img src="https://cdn.worldvectorlogo.com/logos/make-com.svg" width="80" alt="Make (Integromat)"/>
   <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" height="40" alt="Hugging Face"/>
   <img src="https://www.kaggle.com/static/images/site-logo.svg" height="40" alt="Kaggle"/>
 </p>
@@ -37,8 +38,8 @@ I’m currently exploring **AI development** across three areas:
 
 ### 1. Python GPT Chatbot  
 **Tech stack:** Python, OpenAI API  
-**Description:**  
-A conversational AI chatbot that intelligently responds to user queries using OpenAI's API.  
+**Description:**  A conversational AI chatbot that intelligently responds to user queries using OpenAI's API.  
+
 **Features:**  
 - Natural language responses  
 - API-powered conversation engine  
@@ -48,8 +49,8 @@ A conversational AI chatbot that intelligently responds to user queries using Op
 
 ### 2. Smart Nap Box Locator  
 **Tech stack:** Python, Tkinter, Folium, GeoPy, Pandas  
-**Description:**  
-A desktop application that assists Internet Service Providers (ISPs) in locating nearby NAP (Network Access Point) boxes within a defined distance from a customer’s coordinates.  
+**Description:**  A desktop application that assists Internet Service Providers (ISPs) in locating nearby NAP (Network Access Point) boxes within a defined distance from a customer’s coordinates.  
+
 **Features:**  
 - Upload customers and NAP box CSV files  
 - Auto-fill coordinates when selecting a customer  
