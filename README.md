@@ -39,7 +39,6 @@ I’m currently exploring **AI development** across three areas:
 **Tech stack:** Python, OpenAI API  
 **Description:**  
 A conversational AI chatbot that intelligently responds to user queries using OpenAI's API.  
-
 **Features:**  
 - Natural language responses  
 - API-powered conversation engine  
@@ -51,7 +50,6 @@ A conversational AI chatbot that intelligently responds to user queries using Op
 **Tech stack:** Python, Tkinter, Folium, GeoPy, Pandas  
 **Description:**  
 A desktop application that assists Internet Service Providers (ISPs) in locating nearby NAP (Network Access Point) boxes within a defined distance from a customer’s coordinates.  
-
 **Features:**  
 - Upload customers and NAP box CSV files  
 - Auto-fill coordinates when selecting a customer  
