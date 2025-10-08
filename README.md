@@ -24,6 +24,7 @@ I’m currently exploring **AI development** across three areas:
 ### 🧩 AI Development Tools  
 
 <p align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40" alt="Python"/>
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuoDnybkjAaB9DmZNH4em5CySqrwacTBufiA&s" height="40" alt="Teachable Machine"/>
   <img src="https://avatars.githubusercontent.com/u/53104118?s=280&v=4" height="40" alt="Roboflow"/>
   <img src="https://avatars.githubusercontent.com/u/45487711?s=200&v=4" height="40" alt="n8n"/>
