@@ -27,7 +27,7 @@ I’m currently exploring **AI development** across three areas:
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuoDnybkjAaB9DmZNH4em5CySqrwacTBufiA&s" height="40" alt="Teachable Machine"/>
   <img src="https://avatars.githubusercontent.com/u/53104118?s=280&v=4" height="40" alt="Roboflow"/>
   <img src="https://avatars.githubusercontent.com/u/45487711?s=200&v=4" height="40" alt="n8n"/>
-  <img src="https://cdn.worldvectorlogo.com/logos/make-com.svg" width="80" alt="Make (Integromat)"/>
+  <img src="https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/make-color.png" height="40" alt="Make (Integromat)"/>
   <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" height="40" alt="Hugging Face"/>
   <img src="https://www.kaggle.com/static/images/site-logo.svg" height="40" alt="Kaggle"/>
 </p>
