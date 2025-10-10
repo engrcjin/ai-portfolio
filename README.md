@@ -39,6 +39,7 @@ I’m currently exploring **AI development** across three areas:
 
 ### 1. Python GPT Chatbot  
 **Tech stack:** Python, OpenAI API  
+
 **Description:**  A conversational AI chatbot that intelligently responds to user queries using OpenAI's API.  
 
 **Features:**  
@@ -50,6 +51,7 @@ I’m currently exploring **AI development** across three areas:
 
 ### 2. Smart NAP Box Locator  
 **Tech stack:** Python, Tkinter, Folium, GeoPy, Pandas  
+
 **Description:**  A desktop application that assists Internet Service Providers (ISPs) in locating nearby NAP (Network Access Point) boxes within a defined distance from a customer’s coordinates.  
 
 **Features:**  
@@ -64,6 +66,7 @@ I’m currently exploring **AI development** across three areas:
 ### 3. NAP Box Utilization Monitor
 
 **Tech stack:** Python, Pandas, Matplotlib, Folium, Tkinter
+
 **Description:** A monitoring tool that analyzes and visualizes NAP box utilization across different locations. It helps identify which areas are nearing full capacity and provides both graphical and map-based insights.
 
 **Features:**
