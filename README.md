@@ -57,4 +57,18 @@ I’m currently exploring **AI development** across three areas:
 - Auto-fill coordinates when selecting a customer  
 - Set search radius (in meters)  
 - Interactive map visualization with nearby NAP boxes  
-- Automatically open map results in your browser  
+- Automatically open map results in your browser
+
+---
+
+### 3. NAP Box Utilization Monitor
+
+**Tech stack:** Python, Pandas, Matplotlib, Folium, Tkinter
+**Description:** A monitoring tool that analyzes and visualizes NAP box utilization across different locations. It helps identify which areas are nearing full capacity and provides both graphical and map-based insights.
+
+**Features:**
+- Upload and analyze NAP box data from CSV
+- Automatic utilization percentage and status classification
+- Bar graph showing utilization by place
+- Interactive map with color-coded NAP markers (Normal, High, Critical)
+- Simple GUI for data input and viewing results
