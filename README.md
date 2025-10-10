@@ -48,7 +48,7 @@ I’m currently exploring **AI development** across three areas:
 
 ---
 
-### 2. Smart Nap Box Locator  
+### 2. Smart NAP Box Locator  
 **Tech stack:** Python, Tkinter, Folium, GeoPy, Pandas  
 **Description:**  A desktop application that assists Internet Service Providers (ISPs) in locating nearby NAP (Network Access Point) boxes within a defined distance from a customer’s coordinates.  
 
