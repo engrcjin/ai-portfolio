@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6dfd8db0e73feef7da8d702c6efea1ba {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+         <div style="position: fixed; 
+                     bottom: 50px; left: 50px; width: 170px; height: 110px; 
+                     border:2px solid grey; z-index:9999; font-size:14px;
+                     background-color: white; opacity: 0.85;
+                     padding: 10px;">
+         <b>📍 Legend</b><br>
+         <i style="background:green; width:10px; height:10px; float:left; margin-right:8px; opacity:0.8;"></i> Normal (&lt;80%)<br>
+         <i style="background:orange; width:10px; height:10px; float:left; margin-right:8px; opacity:0.8;"></i> High (80–90%)<br>
+         <i style="background:darkred; width:10px; height:10px; float:left; margin-right:8px; opacity:0.8;"></i> Critical (&gt;90%)<br>
+         </div>
+         
+    
+            <div class="folium-map" id="map_6dfd8db0e73feef7da8d702c6efea1ba" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6dfd8db0e73feef7da8d702c6efea1ba = L.map(
+                "map_6dfd8db0e73feef7da8d702c6efea1ba",
+                {
+                    center: [10.830756, 122.518336],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_efb3e082b96d8ea65df3d5d898b15b0a = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_efb3e082b96d8ea65df3d5d898b15b0a.addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+            var circle_marker_154f2c1fbf91957543dbe726ce75b822 = L.circleMarker(
+                [10.7762, 122.5456],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_cdf778784d5e62316ec0429fe1ff8077 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cfc1ee05894f15799195eb6bf725a9f5 = $(`<div id="html_cfc1ee05894f15799195eb6bf725a9f5" style="width: 100.0%; height: 100.0%;">NAP-1 (75.0%) - Normal Pavia</div>`)[0];
+                popup_cdf778784d5e62316ec0429fe1ff8077.setContent(html_cfc1ee05894f15799195eb6bf725a9f5);
+            
+        
+
+        circle_marker_154f2c1fbf91957543dbe726ce75b822.bindPopup(popup_cdf778784d5e62316ec0429fe1ff8077)
+        ;
+
+        
+    
+    
+            var circle_marker_7a5d9542c77f5a8ec7818e6ea0e63af4 = L.circleMarker(
+                [10.8195, 122.5319],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_972aace0937cd8c43ea40a678130c639 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c4018fe69a9c7aca74bef03aa4aba14c = $(`<div id="html_c4018fe69a9c7aca74bef03aa4aba14c" style="width: 100.0%; height: 100.0%;">NAP-2 (93.8%) - Critical Sta. Barbara</div>`)[0];
+                popup_972aace0937cd8c43ea40a678130c639.setContent(html_c4018fe69a9c7aca74bef03aa4aba14c);
+            
+        
+
+        circle_marker_7a5d9542c77f5a8ec7818e6ea0e63af4.bindPopup(popup_972aace0937cd8c43ea40a678130c639)
+        ;
+
+        
+    
+    
+            var circle_marker_fe47dce6d2d46198c1b9c0cc8a749b79 = L.circleMarker(
+                [10.8861, 122.4882],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_f6b0720d0077e0e409421b3387fd70ee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e1711efbdb6733e3e1fe1d5fba58721c = $(`<div id="html_e1711efbdb6733e3e1fe1d5fba58721c" style="width: 100.0%; height: 100.0%;">NAP-3 (56.2%) - Normal Cabatuan</div>`)[0];
+                popup_f6b0720d0077e0e409421b3387fd70ee.setContent(html_e1711efbdb6733e3e1fe1d5fba58721c);
+            
+        
+
+        circle_marker_fe47dce6d2d46198c1b9c0cc8a749b79.bindPopup(popup_f6b0720d0077e0e409421b3387fd70ee)
+        ;
+
+        
+    
+    
+            var circle_marker_7e9167d744c249106e52373679b611de = L.circleMarker(
+                [10.8143, 122.4651],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_8e0118cdaea06e6a8fd5bdde65ee0cb5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9bdf6f65f260b796a62c44ff2a910a63 = $(`<div id="html_9bdf6f65f260b796a62c44ff2a910a63" style="width: 100.0%; height: 100.0%;">NAP-4 (43.8%) - Normal San Miguel</div>`)[0];
+                popup_8e0118cdaea06e6a8fd5bdde65ee0cb5.setContent(html_9bdf6f65f260b796a62c44ff2a910a63);
+            
+        
+
+        circle_marker_7e9167d744c249106e52373679b611de.bindPopup(popup_8e0118cdaea06e6a8fd5bdde65ee0cb5)
+        ;
+
+        
+    
+    
+            var circle_marker_0e30082342c25712e6e9aa94318667ed = L.circleMarker(
+                [10.828, 122.6064],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_d741359c823968d7cd9670c6e69ee6c9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d00774479364cf720ab3d93ca354fa3a = $(`<div id="html_d00774479364cf720ab3d93ca354fa3a" style="width: 100.0%; height: 100.0%;">NAP-5 (87.5%) - High Leganes</div>`)[0];
+                popup_d741359c823968d7cd9670c6e69ee6c9.setContent(html_d00774479364cf720ab3d93ca354fa3a);
+            
+        
+
+        circle_marker_0e30082342c25712e6e9aa94318667ed.bindPopup(popup_d741359c823968d7cd9670c6e69ee6c9)
+        ;
+
+        
+    
+    
+            var circle_marker_60a7861726ab983e1b09efdaf88b8d42 = L.circleMarker(
+                [10.6932, 122.4731],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_08bc9bbbf5a5ce147357cf345164677c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b09868e66100b85677bb330a21dd33cd = $(`<div id="html_b09868e66100b85677bb330a21dd33cd" style="width: 100.0%; height: 100.0%;">NAP-6 (62.5%) - Normal Oton</div>`)[0];
+                popup_08bc9bbbf5a5ce147357cf345164677c.setContent(html_b09868e66100b85677bb330a21dd33cd);
+            
+        
+
+        circle_marker_60a7861726ab983e1b09efdaf88b8d42.bindPopup(popup_08bc9bbbf5a5ce147357cf345164677c)
+        ;
+
+        
+    
+    
+            var circle_marker_dbf4a9ab47fa85b9a597bccaa7805059 = L.circleMarker(
+                [10.6743, 122.3772],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_d4a3163e7e9693b60b6280a850286c5f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5d163f020ecb98a0d970b440d3bb5431 = $(`<div id="html_5d163f020ecb98a0d970b440d3bb5431" style="width: 100.0%; height: 100.0%;">NAP-7 (81.2%) - High Tigbauan</div>`)[0];
+                popup_d4a3163e7e9693b60b6280a850286c5f.setContent(html_5d163f020ecb98a0d970b440d3bb5431);
+            
+        
+
+        circle_marker_dbf4a9ab47fa85b9a597bccaa7805059.bindPopup(popup_d4a3163e7e9693b60b6280a850286c5f)
+        ;
+
+        
+    
+    
+            var circle_marker_b41843eacfc6f41cbbe8396ffd814e36 = L.circleMarker(
+                [10.6431, 122.2322],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_0ca9164f11caa8eedf927ad0a7be374d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7bff63e434012fc107ea270064bbca71 = $(`<div id="html_7bff63e434012fc107ea270064bbca71" style="width: 100.0%; height: 100.0%;">NAP-8 (50.0%) - Normal Miagao</div>`)[0];
+                popup_0ca9164f11caa8eedf927ad0a7be374d.setContent(html_7bff63e434012fc107ea270064bbca71);
+            
+        
+
+        circle_marker_b41843eacfc6f41cbbe8396ffd814e36.bindPopup(popup_0ca9164f11caa8eedf927ad0a7be374d)
+        ;
+
+        
+    
+    
+            var circle_marker_9c22fe8a6c33a9da26f858c352a7f0a6 = L.circleMarker(
+                [10.6715, 122.3234],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_109bba9a99f72191e2ab0d98c8bcfa0b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_87bf14bf03203b6ed2394e4d44539afe = $(`<div id="html_87bf14bf03203b6ed2394e4d44539afe" style="width: 100.0%; height: 100.0%;">NAP-9 (100.0%) - Critical Guimbal</div>`)[0];
+                popup_109bba9a99f72191e2ab0d98c8bcfa0b.setContent(html_87bf14bf03203b6ed2394e4d44539afe);
+            
+        
+
+        circle_marker_9c22fe8a6c33a9da26f858c352a7f0a6.bindPopup(popup_109bba9a99f72191e2ab0d98c8bcfa0b)
+        ;
+
+        
+    
+    
+            var circle_marker_0ddcc661b76e0549670dfc42224bc6ce = L.circleMarker(
+                [10.5993, 122.081],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_54e05a6f8f40c3e94f4bf4a51864da3a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cdcd389f44c5e1ab16c21672c979b07d = $(`<div id="html_cdcd389f44c5e1ab16c21672c979b07d" style="width: 100.0%; height: 100.0%;">NAP-10 (68.8%) - Normal San Joaquin</div>`)[0];
+                popup_54e05a6f8f40c3e94f4bf4a51864da3a.setContent(html_cdcd389f44c5e1ab16c21672c979b07d);
+            
+        
+
+        circle_marker_0ddcc661b76e0549670dfc42224bc6ce.bindPopup(popup_54e05a6f8f40c3e94f4bf4a51864da3a)
+        ;
+
+        
+    
+    
+            var circle_marker_fbd30baf44cef09944bf7438b6a56fa9 = L.circleMarker(
+                [10.825, 122.7154],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_e5c33a380c0599dcd45028ca7d2165bf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_377b0067d2cbb9a7d1d139476d60b15f = $(`<div id="html_377b0067d2cbb9a7d1d139476d60b15f" style="width: 100.0%; height: 100.0%;">NAP-11 (31.2%) - Normal Dumangas</div>`)[0];
+                popup_e5c33a380c0599dcd45028ca7d2165bf.setContent(html_377b0067d2cbb9a7d1d139476d60b15f);
+            
+        
+
+        circle_marker_fbd30baf44cef09944bf7438b6a56fa9.bindPopup(popup_e5c33a380c0599dcd45028ca7d2165bf)
+        ;
+
+        
+    
+    
+            var circle_marker_97b9c4017ce7c9f1d79c59a806629539 = L.circleMarker(
+                [10.8257, 122.6101],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_ca6c9dcb8c52e4ae4b58ddceba5b2316 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5ffd56dc5da515088188bc542a6960e3 = $(`<div id="html_5ffd56dc5da515088188bc542a6960e3" style="width: 100.0%; height: 100.0%;">NAP-12 (37.5%) - Normal Zarraga</div>`)[0];
+                popup_ca6c9dcb8c52e4ae4b58ddceba5b2316.setContent(html_5ffd56dc5da515088188bc542a6960e3);
+            
+        
+
+        circle_marker_97b9c4017ce7c9f1d79c59a806629539.bindPopup(popup_ca6c9dcb8c52e4ae4b58ddceba5b2316)
+        ;
+
+        
+    
+    
+            var circle_marker_d95398be7985bf8baac93c47285ba1cc = L.circleMarker(
+                [10.8859, 122.5832],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_663cbd82bbf66b262f0dafc5c8f50eaa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_add8647c1631b7ac6cc343075af3f509 = $(`<div id="html_add8647c1631b7ac6cc343075af3f509" style="width: 100.0%; height: 100.0%;">NAP-13 (56.2%) - Normal New Lucena</div>`)[0];
+                popup_663cbd82bbf66b262f0dafc5c8f50eaa.setContent(html_add8647c1631b7ac6cc343075af3f509);
+            
+        
+
+        circle_marker_d95398be7985bf8baac93c47285ba1cc.bindPopup(popup_663cbd82bbf66b262f0dafc5c8f50eaa)
+        ;
+
+        
+    
+    
+            var circle_marker_2e52bea6cd4c8c8597f329403649a2d8 = L.circleMarker(
+                [10.7832, 122.3691],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_32a1b2106a9a56156d3dcfdc0c1bafc9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0fae09ef9f7f69451a7c79c0108fa245 = $(`<div id="html_0fae09ef9f7f69451a7c79c0108fa245" style="width: 100.0%; height: 100.0%;">NAP-14 (87.5%) - High Leon</div>`)[0];
+                popup_32a1b2106a9a56156d3dcfdc0c1bafc9.setContent(html_0fae09ef9f7f69451a7c79c0108fa245);
+            
+        
+
+        circle_marker_2e52bea6cd4c8c8597f329403649a2d8.bindPopup(popup_32a1b2106a9a56156d3dcfdc0c1bafc9)
+        ;
+
+        
+    
+    
+            var circle_marker_3c53c39aaca6cea5de4ffada9b9fe850 = L.circleMarker(
+                [10.8307, 122.4331],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_ed8f2f71e79e36366119cedd705b8c8e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eab8ffe84fb344428a0312692703697f = $(`<div id="html_eab8ffe84fb344428a0312692703697f" style="width: 100.0%; height: 100.0%;">NAP-15 (75.0%) - Normal Alimodian</div>`)[0];
+                popup_ed8f2f71e79e36366119cedd705b8c8e.setContent(html_eab8ffe84fb344428a0312692703697f);
+            
+        
+
+        circle_marker_3c53c39aaca6cea5de4ffada9b9fe850.bindPopup(popup_ed8f2f71e79e36366119cedd705b8c8e)
+        ;
+
+        
+    
+    
+            var circle_marker_53546622777acbf8b27461916883b792 = L.circleMarker(
+                [10.8198, 122.5373],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_d3638c9769a420cfeee46b84cf987901 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7966bcacd95aee041336dd1203975498 = $(`<div id="html_7966bcacd95aee041336dd1203975498" style="width: 100.0%; height: 100.0%;">NAP-16 (18.8%) - Normal Santa Barbara</div>`)[0];
+                popup_d3638c9769a420cfeee46b84cf987901.setContent(html_7966bcacd95aee041336dd1203975498);
+            
+        
+
+        circle_marker_53546622777acbf8b27461916883b792.bindPopup(popup_d3638c9769a420cfeee46b84cf987901)
+        ;
+
+        
+    
+    
+            var circle_marker_b9e3b4f346fe13af9468ebc660df9add = L.circleMarker(
+                [10.7837, 122.7729],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_1e90930418abf0b4bd50295efce36be5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_30d69bef3d195f3eb7a37195bfe5fa3e = $(`<div id="html_30d69bef3d195f3eb7a37195bfe5fa3e" style="width: 100.0%; height: 100.0%;">NAP-17 (93.8%) - Critical San Enrique</div>`)[0];
+                popup_1e90930418abf0b4bd50295efce36be5.setContent(html_30d69bef3d195f3eb7a37195bfe5fa3e);
+            
+        
+
+        circle_marker_b9e3b4f346fe13af9468ebc660df9add.bindPopup(popup_1e90930418abf0b4bd50295efce36be5)
+        ;
+
+        
+    
+    
+            var circle_marker_3e78131b880a9eeed2beaa88cd8c71a1 = L.circleMarker(
+                [10.9942, 122.6719],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_93132b941417ba0fc5983e10a60e28d7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4f90547fec1d029de02229448b5d788f = $(`<div id="html_4f90547fec1d029de02229448b5d788f" style="width: 100.0%; height: 100.0%;">NAP-18 (81.2%) - High Dingle</div>`)[0];
+                popup_93132b941417ba0fc5983e10a60e28d7.setContent(html_4f90547fec1d029de02229448b5d788f);
+            
+        
+
+        circle_marker_3e78131b880a9eeed2beaa88cd8c71a1.bindPopup(popup_93132b941417ba0fc5983e10a60e28d7)
+        ;
+
+        
+    
+    
+            var circle_marker_1e1e0c0399d4a6baaf1211faa1e1f006 = L.circleMarker(
+                [10.9439, 122.6371],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_b3a095dba4c9d3cb1f667a9c077648d6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_18e16598d0a89e793f219f54eba2627d = $(`<div id="html_18e16598d0a89e793f219f54eba2627d" style="width: 100.0%; height: 100.0%;">NAP-19 (56.2%) - Normal Pototan</div>`)[0];
+                popup_b3a095dba4c9d3cb1f667a9c077648d6.setContent(html_18e16598d0a89e793f219f54eba2627d);
+            
+        
+
+        circle_marker_1e1e0c0399d4a6baaf1211faa1e1f006.bindPopup(popup_b3a095dba4c9d3cb1f667a9c077648d6)
+        ;
+
+        
+    
+    
+            var circle_marker_4a785f36e714d5385f543f75cda49801 = L.circleMarker(
+                [10.9513, 122.5108],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_a6855b3ff22cedf51983a80e2d82c20d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fb3c9b88f1994b7d8c510c20bca79d1d = $(`<div id="html_fb3c9b88f1994b7d8c510c20bca79d1d" style="width: 100.0%; height: 100.0%;">NAP-20 (68.8%) - Normal Janiuay</div>`)[0];
+                popup_a6855b3ff22cedf51983a80e2d82c20d.setContent(html_fb3c9b88f1994b7d8c510c20bca79d1d);
+            
+        
+
+        circle_marker_4a785f36e714d5385f543f75cda49801.bindPopup(popup_a6855b3ff22cedf51983a80e2d82c20d)
+        ;
+
+        
+    
+    
+            var circle_marker_59b935a728732a63d44d59c1d56f6e83 = L.circleMarker(
+                [11.0505, 122.4834],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_5d6ad40bad3ff37fcc629a548ab5195e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6b8952857e772b429e401aa1ba613a23 = $(`<div id="html_6b8952857e772b429e401aa1ba613a23" style="width: 100.0%; height: 100.0%;">NAP-21 (25.0%) - Normal Lambunao</div>`)[0];
+                popup_5d6ad40bad3ff37fcc629a548ab5195e.setContent(html_6b8952857e772b429e401aa1ba613a23);
+            
+        
+
+        circle_marker_59b935a728732a63d44d59c1d56f6e83.bindPopup(popup_5d6ad40bad3ff37fcc629a548ab5195e)
+        ;
+
+        
+    
+    
+            var circle_marker_2940dec536b734531a5300fc95cc91c7 = L.circleMarker(
+                [11.1077, 122.6395],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_0c874bd80df98f795e28d7d934eb3561 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_88a874b119aee168a67be25aca41a617 = $(`<div id="html_88a874b119aee168a67be25aca41a617" style="width: 100.0%; height: 100.0%;">NAP-22 (43.8%) - Normal Passi City</div>`)[0];
+                popup_0c874bd80df98f795e28d7d934eb3561.setContent(html_88a874b119aee168a67be25aca41a617);
+            
+        
+
+        circle_marker_2940dec536b734531a5300fc95cc91c7.bindPopup(popup_0c874bd80df98f795e28d7d934eb3561)
+        ;
+
+        
+    
+    
+            var circle_marker_42f432b1ce4a5478d7b91d865eb28622 = L.circleMarker(
+                [10.8914, 122.7793],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_a11f9aa4e19ad6edc6904dce9baa6238 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c8fb278cdc130ee91e002fa6d183b0b5 = $(`<div id="html_c8fb278cdc130ee91e002fa6d183b0b5" style="width: 100.0%; height: 100.0%;">NAP-23 (62.5%) - Normal Anilao</div>`)[0];
+                popup_a11f9aa4e19ad6edc6904dce9baa6238.setContent(html_c8fb278cdc130ee91e002fa6d183b0b5);
+            
+        
+
+        circle_marker_42f432b1ce4a5478d7b91d865eb28622.bindPopup(popup_a11f9aa4e19ad6edc6904dce9baa6238)
+        ;
+
+        
+    
+    
+            var circle_marker_4eaa8e1e3db4c1f3a1d56f0a5e36d4a4 = L.circleMarker(
+                [10.9502, 122.5291],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_38b5d7dea885e2f0c590921861ba08f8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8717a53058a0eb364504d51ec4057b85 = $(`<div id="html_8717a53058a0eb364504d51ec4057b85" style="width: 100.0%; height: 100.0%;">NAP-24 (50.0%) - Normal Badiangan</div>`)[0];
+                popup_38b5d7dea885e2f0c590921861ba08f8.setContent(html_8717a53058a0eb364504d51ec4057b85);
+            
+        
+
+        circle_marker_4eaa8e1e3db4c1f3a1d56f0a5e36d4a4.bindPopup(popup_38b5d7dea885e2f0c590921861ba08f8)
+        ;
+
+        
+    
+    
+            var circle_marker_a96e1b7c8e1f946734e717cba5335aa1 = L.circleMarker(
+                [10.7202, 122.5621],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_6dfd8db0e73feef7da8d702c6efea1ba);
+        
+    
+        var popup_61c4c12476bd630b989f7a4048f4c1bf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f7961dce4a280c57ec532003ee2a884c = $(`<div id="html_f7961dce4a280c57ec532003ee2a884c" style="width: 100.0%; height: 100.0%;">NAP-25 (100.0%) - Critical Iloilo City</div>`)[0];
+                popup_61c4c12476bd630b989f7a4048f4c1bf.setContent(html_f7961dce4a280c57ec532003ee2a884c);
+            
+        
+
+        circle_marker_a96e1b7c8e1f946734e717cba5335aa1.bindPopup(popup_61c4c12476bd630b989f7a4048f4c1bf)
+        ;
+
+        
+    
+</script>
+</html>
